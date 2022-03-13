@@ -1,4 +1,4 @@
-class Grass {
+class LivingCreature {
     constructor(x, y) {
         this.x = x;
         this.y = y;
@@ -27,6 +27,14 @@ class Grass {
         }
         return result;
     }
+
+}
+
+
+
+
+class Grass extends LivingCreature {
+
     mul() {
         this.multiply++;
         let found = this.chooseCell(0);
@@ -41,7 +49,6 @@ class Grass {
         }
     }
 }
-
 class GrassEater {
     constructor(x, y) {
         this.x = x;
@@ -152,7 +159,8 @@ class GrassEater {
         matrix[this.y][this.x] = 0
     }
 }
-class AllEater {
+
+class AllEater{
     constructor(x, y) {
         this.x = x
         this.y = y
