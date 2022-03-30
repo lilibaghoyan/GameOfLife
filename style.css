@@ -24,3 +24,14 @@ th{
 .td2{
     background-color: blanchedalmond;
 }
+h2{
+    margin: 0px;
+    margin-left: 15px;
+}
+.sul, .eul{
+    display: flex;
+    list-style-type: none;
+}
+li{
+    padding: 10px;
+}

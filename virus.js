@@ -81,6 +81,7 @@ module.exports = class Virus extends LivingCreature {
         for (let i = 0; i < virusArr.length; i++) {
             if (virusArr[i].x == this.x && virusArr[i].y == this.y) {
                 virusArr.splice(i, 1)
+                break;
             }
         }
         matrix[this.y][this.x] = 0

@@ -1,7 +1,7 @@
 let LivingCreature = require("./LivingCreature") 
 
 
-module.exports = class  extends LivingCreature {
+module.exports = class GrassEater extends LivingCreature {
     constructor(x, y) {
        super(x, y)
         this.multiply = 10;
@@ -23,7 +23,6 @@ module.exports = class  extends LivingCreature {
     }
     mul() {
         let found = this.chooseCell(0);
-        // let exact = random(found)
         let exact = found[Math.floor(Math.random() * found.length)]
         if (exact && this.multiply > 100) {
             let x = exact[0];
@@ -39,7 +38,6 @@ module.exports = class  extends LivingCreature {
     }
     eat() {
         let found = this.chooseCell(1);
-        // let exact = random(found)
         let exact = found[Math.floor(Math.random() * found.length)]
 
 
@@ -50,6 +48,7 @@ module.exports = class  extends LivingCreature {
             for (let i = 0; i < grassArr.length; i++) {
                 if (grassArr[i].x == x && grassArr[i].y == y) {
                     grassArr.splice(i, 1)
+                    break;
                 }
             }
             matrix[y][x] = 2
@@ -90,6 +89,7 @@ module.exports = class  extends LivingCreature {
         for (let i = 0; i < grassEaterArr.length; i++) {
             if (grassEaterArr[i].x == this.x && grassEaterArr[i].y == this.y) {
                 grassEaterArr.splice(i, 1)
+                break;
             }
         }
         matrix[this.y][this.x] = 0

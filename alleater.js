@@ -45,6 +45,7 @@ module.exports = class AllEater extends LivingCreature {
             for (let i = 0; i < allEaterArr.length; i++) {
                 if (allEaterArr[i].x == x && allEaterArr[i].y == y) {
                     allEaterArr.splice(i, 1)
+                    break;
                 }
             }
             matrix[y][x] = 3
@@ -87,6 +88,7 @@ module.exports = class AllEater extends LivingCreature {
         for (let i = 0; i < allEaterArr.length; i++) {
             if (allEaterArr[i].x == this.x && allEaterArr[i].y == this.y) {
                 allEaterArr.splice(i, 1)
+                break;
             }
         }
         matrix[this.y][this.x] = 0

@@ -45,6 +45,7 @@ module.exports = class Predator extends LivingCreature {
             for (let i = 0; i < predatorArr.length; i++) {
                 if (predatorArr[i].x == x && predatorArr[i].y == y) {
                     predatorArr.splice(i, 1)
+                    break;
                 }
             }
             matrix[y][x] = 4
@@ -83,6 +84,7 @@ module.exports = class Predator extends LivingCreature {
         for (let i = 0; i < grassEaterArr.length; i++) {
             if (grassEaterArr[i].x == this.x && grassEaterArr[i].y == this.y) {
                 grassEaterArr.splice(i, 1)
+                break;
             }
         }
         matrix[this.y][this.x] = 0
